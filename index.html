@@ -17,8 +17,16 @@
       allowfullscreen
     ></iframe>
 
-    <!-- <video
-      src="blob:https://www.genmirror.com/d88ed7e5-8eea-4688-bfc0-08f83c409402"
-    ></video> -->
+    <video></video>
   </body>
 </html>
+
+<script>
+  const blobContent = new Blob(
+    ['blob:https://www.genmirror.com/d88ed7e5-8eea-4688-bfc0-08f83c409402'],
+    { type: 'video/webm' }
+  );
+
+  const video = document.querySelector('video');
+  video.src = blobContent;
+</script>
